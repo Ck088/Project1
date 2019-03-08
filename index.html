@@ -22,40 +22,53 @@
 
                 $(window).on("scroll", function() {
                     if($(window).scrollTop()) {
-                        $("nav").addClass("black");
+                        $("header").addClass("black");
+                        $(".logo").addClass("shrink");
+                        
                     } else {
                         //remove the background property so it comes transparent again (defined in your css)
-                       $("nav").removeClass("black");
+                        $("header").addClass("black");
+                        
+                       $(".logo").removeClass("shrink");
                     }
                 });
+
+               
             
             </script>
             
 </head>
 <body>
-        <header>
-    <div class="fixed-header">
-    <div class="head container">
 
-    <nav>
-        <h1 class="logo"><a href="#">LOGO</a></h1>
-        <menu class="navbar">
-            <ul>
-                <li>
-                    <a href="#" class="active">HOME</a>
-                </li>
-                <li>
-                        <a href="#">PRODUCTS</a>
-                </li>
-                <li>
-                        <a href="#">SERVICES</a>
-                </li>
-            </ul>
-        </menu>
-    </nav>
-   
-</div>
-    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light fixed">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                 <img src="images/logo.png" height="70px" alt="" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">PRODUCTS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
 
 <div>
@@ -107,18 +120,19 @@
               <div class="jumbo">
 
                     <div class="jumbotron jumbotron-fluid">
-                            <div class="container">
+                            
                               <h1 class="display-4">We Grow Coffee like Baby...</h1>
-                              <div class="flexvid">
+                              <div class="container1">
+                                 <div class="jumboflex">
                                   <div>
-                              <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                   <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Odit iusto a illum voluptas libero
                                    perspiciatis quod, officia enim deserunt similique placea
                                   t aperiam dolore exercitationem doloribus in expedita natu
                                   s architecto eaque quas dolorum velit! Fuga commodi itaque 
                                   cupiditate alias libero sequi.</p></div>
                                   <div>
-                                  <iframe width="460" height="250" src="https://www.youtube.com/embed/VtM9Doxw878" frameborder="0"
+                                  <iframe class="video" width="460" height="250" src="https://www.youtube.com/embed/VtM9Doxw878" frameborder="0"
                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
                         </div>
@@ -126,7 +140,7 @@
                 </div>
               </div>
 
-<div class="container">
+<div class="container1">
 <div class="cards">
     <img src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
     <div><h3>Quality Coffee</h3><p>
@@ -134,7 +148,8 @@
            s doloremque hic ea non, maiores eum, quae repudiandae doloribus accusantium ratione fugiat.
     </p></div>
 </div>
-
+</div>
+<div class="container2">
 
 <div class="cards">
         <div><h3>Quality Coffee</h3><p>
@@ -144,41 +159,113 @@
         <img src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
        
     </div>
+</div>
 
-    
+
+    <div class="container3">
 <div class="cards">
-        <img src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
-        <div><h3>Quality Coffee</h3><p>
+        <img class="img" src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
+        <div class="para"><h3>Quality Coffee</h3><p>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti omnis debitis sunt sapiente vero assumenda molestias, voluptate
                s doloremque hic ea non, maiores eum, quae repudiandae doloribus accusantium ratione fugiat.
         </p></div>
     </div>
+    </div>
         
-</div>
+
 
 
 <footer>
 <div>
+<!-- Footer -->
+<footer class="page-footer font-small bg-info">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Content -->
+                <h5 class="font-weight-bold text-uppercase mb-4">About us</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus consectetur veniam iusto corrupti! Asperiores voluptatibus earum at, aut iusto deleniti!</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet pariatur accusantium nobis iste culpa quos libero eos nam? Aut, adipisci libero? Eaque numquam nostrum commodi recusandae omnis animi, ad harum?</p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+           
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+                <!-- Contact details -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> XXXX, YYYYY, ZZZZZ</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> example@example.com</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> +12345667899</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> +987876764398</p>
+                    </li>
+                </ul>
+
+            </div>
 
 
-        <div class="card bg-dark text-white">
-                <img src="https://latintravelguide.com/images/w700/the-coffee-region-coffee-region-85.jpg" height="250px" class="card-img" >
-                <div class="card-img-overlay">
-                  <h2 class="card-title">About Us</h2>
-                  <p class="disc">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate ipsa saepe unde dolorum recusandae blanditiis cumque temporibus illo repudiandae iste.</p>
-                  
-                   
-                  
-                  <div class="soc">
-                     <h3>Connect Us :</h3>
-                     <div class="social">
-                 <a href="#" class="socio"><i class="fab fa-facebook"></i></a>
-                 <a href="#" class="socio"><i class="fab fa-instagram"></i></a>
-                 <a href="#" class="socio"><i class="fab fa-linkedin"></i></a>
-                 </div>
-                 </div>
-                 </div>
-              </div>
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+                <!-- Social buttons -->
+                <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+                <!-- Facebook -->
+                <a href="#" class="icon">
+                    <i class="fab fa-facebook-square"></i></a>
+                <!-- Twitter -->
+                <a href="#" class="icon">
+                    <i class="fab fa-twitter"></i></a>
+                <!-- Google +-->
+                <a href="#" class="icon">
+                    <i class="fab fa-google-plus-g"></i></a>
+
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2019 Copyright
+        <a href="#"></a>
+    </div>
+    <!-- Copyright -->
+
+</footer>
 </div>
 
 
