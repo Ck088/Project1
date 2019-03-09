@@ -48,17 +48,37 @@ iframe{
     float: right;
 }
 
+.container2 , .container3{
+    margin-left: 100px;
+}
+
 .cards{
     display: inline-flex;
-    
+    justify-content: space-between;
     margin: 10%;
     
 }
 
-.cards img{
-    margin: 0% 10%;
+.container2 .cards div{
+    width: 300px;
+    margin-right: 60px;
 }
 
+.container2 .cards img{
+    margin-left:300px;
+}
+
+
+.container3 .cards div{
+    
+    width: 300px;
+
+    margin-left: 200px
+    }
+
+.container3 .cards img{
+    width: 300px;
+}
 
 .disc{
     width: 300px
