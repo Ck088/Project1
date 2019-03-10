@@ -16,59 +16,83 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
     <script src="main.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass" rel="stylesheet">
+    
 
 
     <script>
 
                 $(window).on("scroll", function() {
                     if($(window).scrollTop()) {
-                        $("header").addClass("black");
                         $(".logo").addClass("shrink");
                         
                     } else {
                         //remove the background property so it comes transparent again (defined in your css)
-                        $("header").addClass("black");
                         
                        $(".logo").removeClass("shrink");
                     }
                 });
 
-               
+               $(document).ready(function(){
+
+                   $(".navbar-toggler,.overlay").on("click", function(){
+                       
+                       $(".mobileMenu,.overlay").toggleClass("open");
+                   })
+               })
             
             </script>
             
 </head>
 <body>
-
+  <div class="mypage">
     <header>
         <nav class="navbar navbar-expand-lg navbar-light fixed">
             <div class="container">
-                <a class="navbar-brand" href="#">
-                 <img src="images/logo.png" height="70px" alt="" class="logo">
+                <a class="navbar-brand order-0 order-lg-0 ml-lg-0 mr-auto" href="#">
+                 <img src="images/PagCLogoTransparent.png" height="70px" alt="" class="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-lg-auto">
+                <div class="closebutton">
+                    <button type="button" class="close" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      </div>
+                   
+
+                <div class="collapse navbar-collapse mobileMenu onRight flex-lg-row flex-xl-row d-flex flex-column justify-content-center p-3 mt-3 p-lg-0  mt-lg-0" id="navbarSupportedContent">
+                   
+                    
+                    <ul class="navbar-nav align-self-stretch">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="#">pagCafé<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">PRODUCTS</a>
+                            <a class="nav-link" href="#">pagPropina</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT</a>
+                            <a class="nav-link" href="#">
+                                Mission</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT</a>
+                            <a class="nav-link" href="#">Café Colombiano</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Colpensiones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                About Us</a>
                         </li>
                     </ul>
                 </div>
             </div>
+            
         </nav>
+        <div class="overlay"></div>
     </header>
 
 <div>
@@ -80,29 +104,45 @@
                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+                    <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+
                   </ol>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
-                      <img src="http://s.marketwatch.com/public/resources/MWimages/MW-DC063_coffee_ZG_20141219181302.jpg" class="d-block w-100" alt="...">
+                      <img src="images\Screen Shot 2018-06-19 at 9.26.30 AM.png" class="d-block w-100" alt="...">
                       <div class="carousel-caption d-none d-md-block">
-                        <h1>First Motto Line</h1>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h1>Helping Farmers Embrace Technology
+                        </h1>
+                      </div>
+                    </div>
+                  
+                    <div class="carousel-item">
+                      <img src="images\money-transfer-3588301_1920.jpg" class="d-block w-100" alt="...">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h1>Empowering Farmers</h1>
+                        <p>Digital Platform For Seamless Payments</p>
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="https://www.chateauelan.com/wp-content/uploads/2013/05/420838.jpg" class="d-block w-100" alt="...">
+                      <img src="images\bg.jpg" class="d-block w-100" alt="...">
                       <div class="carousel-caption d-none d-md-block">
-                        <h1>Second Motto Line</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1>Enabling Crop Yield</h1>
+                        <p>Motivating Farmers Adopt AgriTech</p>
                       </div>
                     </div>
                     <div class="carousel-item">
-                      <img src="https://cdn.pixabay.com/photo/2015/03/26/10/50/green-692079_960_720.jpg" class="d-block w-100" alt="...">
-                      <div class="carousel-caption d-none d-md-block">
-                        <h1>Third Motto Line</h1>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <img src="http://s.marketwatch.com/public/resources/MWimages/MW-DC063_coffee_ZG_20141219181302.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h1>Happy Crop Everytime</h1>
+                          </div>
                       </div>
-                    </div>
+                      <div class="carousel-item">
+                        <img src="https://www.chateauelan.com/wp-content/uploads/2013/05/420838.jpg" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h1>We Make The Worlds Best Coffee</h1>
+                        </div>
+                      </div>
                   </div>
                   <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -118,64 +158,71 @@
     
 
               <div class="jumbo">
-
-                    <div class="jumbotron jumbotron-fluid">
-                            
+                   <div class="jumbotron jumbotron-fluid">
+                            <div class="container1">
                               <h1 class="display-4">We Grow Coffee like Baby...</h1>
-                              <div class="container1">
+                              <div>
                                  <div class="jumboflex">
-                                  <div>
-                                   <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                     <div class="box">
+                                  <div class="discrip">
+                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Odit iusto a illum voluptas libero
                                    perspiciatis quod, officia enim deserunt similique placea
                                   t aperiam dolore exercitationem doloribus in expedita natu
                                   s architecto eaque quas dolorum velit! Fuga commodi itaque 
                                   cupiditate alias libero sequi.</p></div>
-                                  <div>
-                                  <iframe class="video" width="460" height="250" src="https://www.youtube.com/embed/VtM9Doxw878" frameborder="0"
+                                     </div>
+                                  <div class="box video">
+                                  <iframe width="460" height="270" src="https://www.youtube.com/embed/VtM9Doxw878" frameborder="0"
                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        </div>
+                                  </div>
+                                 </div>
+                             </div>
                 </div>
               </div>
-
-<div class="container3">
-<div class="cards">
+              </div>
+<div class="content">
+   <div class="container1 spacing">
+    <div class="jumboflex">
+        <div class="box1">
     <img src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
-    <div><h3>Quality Coffee</h3><p>
+    </div><div class="box2 discrip1"><h3>Quality Coffee</h3> 
+       
+        <p>
            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti omnis debitis sunt sapiente vero assumenda molestias, voluptate
            s doloremque hic ea non, maiores eum, quae repudiandae doloribus accusantium ratione fugiat.
     </p></div>
-</div>
-</div>
-<div class="container2">
+    </div>
 
-<div class="cards">
-        <div><h3>Quality Coffee</h3><p>
+    </div>
+<div class="container1 spacing">
+        <div class="jumboflex">
+          
+        <div class="box1 discrip1"><h3>Quality Coffee</h3><p>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti omnis debitis sunt sapiente vero assumenda molestias, voluptate
                s doloremque hic ea non, maiores eum, quae repudiandae doloribus accusantium ratione fugiat.
         </p></div>
+        <div class="box2">
         <img src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
-       
-    </div>
+       </div>
+ 
+</div>
 </div>
 
 
-    <div class="container3">
-<div class="cards">
-        <img class="img" src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
-        <div class="para"><h3>Quality Coffee</h3><p>
+<div class="container1 spacing">
+        <div class="jumboflex">
+          
+       <div class="box1"> <img class="img" src="https://cdn1.medicalnewstoday.com/content/images/articles/311/311019/a-cup-of-hot-coffee-with-coffee-beans.jpg" height="200px" width="300px">
+       </div> <div class="box2 discrip1"><h3>Quality Coffee</h3><p>
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia deleniti omnis debitis sunt sapiente vero assumenda molestias, voluptate
                s doloremque hic ea non, maiores eum, quae repudiandae doloribus accusantium ratione fugiat.
         </p></div>
     </div>
     </div>
         
+</div>
 
-
-
-<footer>
 <div>
 <!-- Footer -->
 <footer class="page-footer font-small bg-info">
@@ -268,8 +315,7 @@
 </footer>
 </div>
 
-
-</footer>
+</div>
 
 </body>
 </html>
